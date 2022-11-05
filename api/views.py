@@ -1,9 +1,9 @@
-from api.serializers import FundoImobiliarioSerializer
+from api.serlializers import FundoImobiliarioSerializer
 from rest_framework import viewsets, permissions
 from api.models import FundoImobiliario
 
 
-class FundoImobiliarioViewsER(viewsets.ModelViewSet):
+class FundoImobiliarioViewSet(viewsets.ModelViewSet):
     queryset = FundoImobiliario.objects.all()
     serializer_class = FundoImobiliarioSerializer
     permission_classes = [permissions.isAuthenticated]
